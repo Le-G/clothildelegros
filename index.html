@@ -3,243 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maître Clothilde LEGROS | Avocate Pénaliste Paris</title>
+    <title>Maître Clothilde LEGROS | Avocate Pénaliste au Barreau de Paris</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
         h1, h2, h3, h4, .serif { font-family: 'Playfair Display', serif; }
-        .page-section { display: none; }
-        .page-section.active { display: block; }
-        
-        .hero-bg {
-            position: relative;
-            background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), 
-                              url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
+        .bg-navy { background-color: #0a0a0f; }
     </style>
+    <script src="components/header.js" defer></script>
+    <script src="components/footer.js" defer></script>
 </head>
 <body class="bg-white text-gray-900">
 
-    <nav class="fixed w-full z-50 bg-white/95 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="javascript:void(0)" onclick="showPage('accueil')" class="text-xl font-bold tracking-widest serif uppercase">
-                Clothilde Legros
-            </a>
-            <div class="hidden md:flex space-x-6 text-[10px] uppercase tracking-[0.2em] font-medium text-gray-500">
-                <a href="javascript:void(0)" onclick="showPage('accueil')" class="hover:text-black transition">Accueil</a>
-                <a href="javascript:void(0)" onclick="showPage('cabinet')" class="hover:text-black transition">Le Cabinet</a>
-                <div class="relative group">
-                    <button class="hover:text-black transition uppercase">Domaines ↓</button>
-                    <div class="absolute hidden group-hover:block bg-white border border-gray-100 p-4 w-64 shadow-xl top-full">
-                        <a href="javascript:void(0)" onclick="showPage('gav')" class="block py-2 hover:text-red-800 transition">Garde à vue</a>
-                        <a href="javascript:void(0)" onclick="showPage('comparution')" class="block py-2 hover:text-red-800 transition">Comparution immédiate</a>
-                        <a href="javascript:void(0)" onclick="showPage('crpc')" class="block py-2 hover:text-red-800 transition">CRPC (Plaider-coupable)</a>
-                        <a href="javascript:void(0)" onclick="showPage('assises')" class="block py-2 hover:text-red-800 transition">Tribunal & Assises</a>
-                        <a href="javascript:void(0)" onclick="showPage('instruction')" class="block py-2 hover:text-red-800 transition">Instruction & Détention</a>
-                        <a href="javascript:void(0)" onclick="showPage('amenagement')" class="block py-2 hover:text-red-800 transition">Aménagement de peine</a>
-                    </div>
-                </div>
-                <a href="javascript:void(0)" onclick="showPage('honoraires')" class="hover:text-black transition">Honoraires</a>
-                <a href="javascript:void(0)" onclick="showPage('contact')" class="hover:text-black transition">Contact</a>
-            </div>
-            <a href="tel:0680109505" class="bg-[#8B1A1A] text-white px-5 py-2 text-[10px] uppercase font-bold tracking-widest hover:bg-black transition">Urgence 24/7</a>
+    <main-header></main-header>
+
+    <section id="accueil" class="relative h-screen flex items-center justify-center bg-gray-50 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop" alt="Palais de Justice" class="w-full h-full object-cover opacity-20 grayscale">
         </div>
-    </nav>
-
-    <main class="pt-20">
-
-        <section id="accueil" class="page-section active">
-            <div class="hero-bg min-h-[80vh] flex flex-col items-center justify-center text-center px-6">
-                <h2 class="text-[11px] uppercase tracking-[0.5em] text-gray-500 mb-8">Avocate pénaliste au barreau de Paris</h2>
-                <h1 class="text-6xl md:text-[90px] mb-10 font-light text-gray-900">Clothilde LEGROS</h1>
-                <p class="max-w-2xl mx-auto text-lg text-gray-700 font-light leading-relaxed mb-12">
-                    Défense pénale à tous les stades de la procédure : garde à vue, instruction judiciaire, jugement et aménagement de peine.
-                </p>
-                <button onclick="showPage('contact')" class="border border-black px-12 py-4 uppercase text-[10px] font-bold tracking-[0.3em] hover:bg-black hover:text-white transition duration-500">
-                    Prendre rendez-vous
-                </button>
+        <div class="relative z-10 text-center px-4 max-w-4xl">
+            <h2 class="text-sm uppercase tracking-[0.3em] text-gray-500 mb-4">Avocate pénaliste au barreau de Paris</h2>
+            <h1 class="text-5xl md:text-7xl mb-8 text-gray-900">Clothilde LEGROS</h1>
+            <p class="text-lg md:text-xl text-gray-700 font-light leading-relaxed mb-10 max-w-2xl mx-auto">
+                Maître Legros plaide devant l’ensemble des cours d’assises et tribunaux correctionnels de France.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#contact" class="border border-black px-10 py-4 uppercase text-xs tracking-widest hover:bg-black hover:text-white transition">Contacter le cabinet</a>
+                <a href="#domaines" class="bg-black text-white px-10 py-4 uppercase text-xs tracking-widest hover:bg-gray-800 transition">Domaines d'intervention</a>
             </div>
-
-            <div class="py-24 border-t border-gray-50">
-                <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-16 text-center">
-                    <div>
-                        <h3 class="text-2xl mb-4 italic serif">Réactivité</h3>
-                        <p class="text-sm text-gray-500 font-light leading-relaxed">Intervention immédiate en garde à vue et comparution immédiate sur toute la France.</p>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl mb-4 italic serif">Rigueur</h3>
-                        <p class="text-sm text-gray-500 font-light leading-relaxed">Analyse précise des procédures pour soulever les nullités et protéger vos droits.</p>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl mb-4 italic serif">Humanité</h3>
-                        <p class="text-sm text-gray-500 font-light leading-relaxed">Une défense sur mesure et une combativité constante auprès de ceux qu'elle défend.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="cabinet" class="page-section py-20 px-6">
-            <div class="max-w-5xl mx-auto">
-                <h2 class="text-4xl mb-16 text-center italic serif">Le Cabinet</h2>
-                <div class="grid md:grid-cols-2 gap-16 items-center">
-                    <div class="bg-gray-100 aspect-[3/4] flex items-center justify-center italic text-gray-400 border border-gray-200">
-                        [Photo Maître Legros]
-                    </div>
-                    <div class="space-y-6 text-gray-700 leading-relaxed font-light">
-                        <p class="text-xl serif italic text-gray-900">Maître Legros exerce exclusivement en droit pénal.</p>
-                        <p>Diplômée de l’École de droit de <strong>Sciences Po Paris</strong>, elle a également étudié à l’University of British Columbia (Vancouver), enrichissant ainsi sa pratique d’une perspective internationale.</p>
-                        <p>Formée auprès d’avocats pénalistes reconnus, elle accorde une importance centrale à l’analyse précise des procédures, soulevant si nécessaire les nullités pour garantir vos droits.</p>
-                        <button onclick="showPage('contact')" class="mt-8 border-b border-black pb-1 uppercase text-[10px] tracking-widest font-bold">Contacter le cabinet →</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="gav" class="page-section py-20 px-6 bg-gray-50">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-4xl mb-10 serif">Garde à vue et audition libre</h2>
-                <div class="prose prose-gray font-light space-y-6 text-gray-700">
-                    <p>La garde à vue est une mesure de contrainte permettant de retenir une personne soupçonnée d’infraction pénale. L’article 63 du Code de procédure pénale prévoit qu'elle dure initialement 24 heures.</p>
-                    <p><strong>L’intervention de l’avocat :</strong> La présence d’un avocat dès le début constitue une garantie indispensable. Maître Legros veille au respect de vos droits fondamentaux, vous prépare aux auditions et s'assure de la régularité de la procédure.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="comparution" class="page-section py-20 px-6">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-4xl mb-10 serif">Comparution immédiate</h2>
-                <div class="space-y-6 text-gray-700 font-light leading-relaxed">
-                    <p>Procédure d'urgence mise en œuvre sur décision du Procureur. La personne est conduite directement devant le Tribunal à l’issue de sa garde à vue.</p>
-                    <p><strong>Défense stratégique :</strong> Face au risque d'incarcération immédiate, l'assistance d'un avocat est indispensable pour vérifier la régularité du dossier et définir la meilleure stratégie (jugement immédiat ou demande de délai).</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="crpc" class="page-section py-20 px-6 bg-gray-50">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-4xl mb-10 serif">CRPC (Plaider-coupable)</h2>
-                <p class="mb-8 font-light">Procédure de Comparution sur Reconnaissance Préalable de Culpabilité où l’avocat négocie la peine avec le Procureur.</p>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-white p-6 border border-gray-200">
-                        <h4 class="font-bold mb-4 uppercase text-[10px]">1. La Négociation</h4>
-                        <p class="text-sm font-light">L’avocat discute de la peine pour obtenir une sanction proportionnée et adaptée.</p>
-                    </div>
-                    <div class="bg-white p-6 border border-gray-200">
-                        <h4 class="font-bold mb-4 uppercase text-[10px]">2. L'Homologation</h4>
-                        <p class="text-sm font-light">Si un accord est trouvé, il est soumis au juge pour validation finale.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="assises" class="page-section py-20 px-6">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-4xl mb-10 serif">Tribunal Correctionnel & Cour d’assises</h2>
-                <div class="space-y-6 text-gray-700 font-light">
-                    <p>Chaque affaire fait l’objet d’une analyse approfondie. Maître Legros prépare minutieusement chaque audience pour anticiper le déroulement des débats.</p>
-                    <p><strong>L'éloquence au service de la défense :</strong> Formée au théâtre et à l’art oratoire, elle met sa maîtrise de l’éloquence au service de ses clients pour porter une parole juste, structurée et convaincante.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="instruction" class="page-section py-20 px-6 bg-gray-50">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-4xl mb-10 serif">Information judiciaire & Détention</h2>
-                <div class="space-y-6 text-gray-700 font-light">
-                    <p>L’instruction judiciaire concerne les dossiers complexes. Maître Legros intervient pour assister le mis en examen lors des interrogatoires et formuler des demandes d’actes.</p>
-                    <p><strong>Détention provisoire :</strong> En cas de placement en détention, elle plaide devant le Juge des Libertés et de la Détention (JLD) et dépose des demandes de mise en liberté aux moments opportuns.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="amenagement" class="page-section py-20 px-6">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-4xl mb-10 serif">Aménagement de peine</h2>
-                <div class="space-y-6 text-gray-700 font-light">
-                    <p>L'aménagement intervient après le prononcé de la peine. L'objectif est d'éviter ou limiter l'incarcération (bracelet électronique, semi-liberté, libération conditionnelle).</p>
-                    <p>Maître Legros constitue un dossier solide pour présenter un projet de réinsertion réaliste devant le Juge de l’Application des Peines (JAP).</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="honoraires" class="page-section py-20 px-6 bg-gray-50">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-4xl mb-12 text-center serif">Honoraires</h2>
-                <div class="bg-white p-10 border border-gray-100 shadow-sm font-light text-gray-600 leading-relaxed">
-                    <p class="italic mb-8">"Les honoraires sont fixés en concertation, de manière transparente, selon la difficulté du dossier et la situation du client."</p>
-                    <div class="grid md:grid-cols-2 gap-10">
-                        <div>
-                            <h4 class="font-bold text-gray-900 mb-2 uppercase text-[10px]">Aide Juridictionnelle</h4>
-                            <p class="text-sm">Le cabinet accepte certains dossiers au titre de l’aide juridictionnelle après examen de l'éligibilité.</p>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-gray-900 mb-2 uppercase text-[10px]">Protection Juridique</h4>
-                            <p class="text-sm">Vos frais d'avocat peuvent être pris en charge par votre assurance selon votre contrat.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="page-section py-20 px-6">
-            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-20">
-                <div>
-                    <h2 class="text-4xl mb-10 serif italic">Contactez le cabinet</h2>
-                    <div class="space-y-8 font-light">
-                        <div>
-                            <p class="uppercase text-[10px] tracking-widest text-gray-400 mb-1">Adresse</p>
-                            <p>32, rue Monsieur le Prince – 75006 PARIS</p>
-                        </div>
-                        <div>
-                            <p class="uppercase text-[10px] tracking-widest text-gray-400 mb-1">Téléphone & WhatsApp</p>
-                            <p class="text-xl">06.80.10.95.05</p>
-                        </div>
-                        <div>
-                            <p class="uppercase text-[10px] tracking-widest text-gray-400 mb-1">E-mail</p>
-                            <p>clothilde.legros.avocat@gmail.com</p>
-                        </div>
-                        <div class="pt-4">
-                            <a href="https://fr.linkedin.com/in/clothilde-legros-07644417a" target="_blank" class="text-xs uppercase tracking-widest border-b border-gray-300 pb-1">LinkedIn ↗</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gray-50 p-8 border border-gray-100">
-                    <h3 class="text-xl mb-6 serif">Envoyer un message</h3>
-                    <form class="space-y-4">
-                        <input type="text" placeholder="Nom" class="w-full p-3 border-b border-gray-300 bg-transparent outline-none focus:border-black transition text-sm">
-                        <input type="email" placeholder="Email" class="w-full p-3 border-b border-gray-300 bg-transparent outline-none focus:border-black transition text-sm">
-                        <textarea placeholder="Votre message" rows="4" class="w-full p-3 border-b border-gray-300 bg-transparent outline-none focus:border-black transition text-sm"></textarea>
-                        <button type="button" class="w-full bg-black text-white py-4 uppercase text-[10px] tracking-widest font-bold">Envoyer la demande</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="bg-white border-t border-gray-100 py-12 px-6">
-        <div class="max-w-7xl mx-auto text-center text-[10px] text-gray-400 uppercase tracking-widest">
-            <p>© 2024 Maître Clothilde Legros - Avocate au Barreau de Paris</p>
         </div>
-    </footer>
+    </section>
 
-    <script>
-        function showPage(pageId) {
-            // Masquer toutes les sections
-            document.querySelectorAll('.page-section').forEach(section => {
-                section.classList.remove('active');
-            });
-            // Afficher la section demandée
-            const target = document.getElementById(pageId);
-            if(target) {
-                target.classList.add('active');
-                window.scrollTo(0, 0);
-            }
-        }
-    </script>
+    <section id="le-cabinet" class="py-24 px-6 bg-white border-b">
+        </section>
+
+    <section id="domaines" class="py-24 bg-gray-50 px-6">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <h2 class="text-4xl serif mb-4">Domaines d'intervention</h2>
+            <p class="text-gray-500 uppercase tracking-widest text-xs">Expertise pénale complète</p>
+        </div>
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-8 border border-gray-100 hover:shadow-xl transition group">
+                <h4 class="text-xl serif mb-4">Garde à vue & Audition libre</h4>
+                <p class="text-gray-500 text-sm mb-6">Intervention immédiate 24h/24 pour garantir vos droits fondamentaux dès les premières heures de l'enquête.</p>
+                <a href="garde-a-vue.html" class="text-xs uppercase font-bold tracking-wider group-hover:text-red-800 transition">En savoir plus +</a>
+            </div>
+            <div class="bg-white p-8 border border-gray-100 hover:shadow-xl transition group">
+                <h4 class="text-xl serif mb-4">Comparution immédiate</h4>
+                <p class="text-gray-500 text-sm mb-6">Défense d'urgence devant le Tribunal correctionnel face aux risques d'incarcération immédiate.</p>
+                <a href="comparution-immediate.html" class="text-xs uppercase font-bold tracking-wider group-hover:text-red-800 transition">En savoir plus +</a>
+            </div>
+            <div class="bg-white p-8 border border-gray-100 hover:shadow-xl transition group">
+                <h4 class="text-xl serif mb-4">CRPC (Plaider-coupable)</h4>
+                <p class="text-gray-500 text-sm mb-6">Négociation avec le Procureur pour obtenir une peine proportionnée et adaptée à votre situation.</p>
+                <a href="crpc.html" class="text-xs uppercase font-bold tracking-wider group-hover:text-red-800 transition">En savoir plus +</a>
+            </div>
+            <div class="bg-white p-8 border border-gray-100 hover:shadow-xl transition group">
+                <h4 class="text-xl serif mb-4">Instruction & Assises</h4>
+                <p class="text-gray-500 text-sm mb-6">Accompagnement dans les dossiers complexes (crimes et délits graves) devant le juge d'instruction.</p>
+                <a href="instruction-assises.html" class="text-xs uppercase font-bold tracking-wider group-hover:text-red-800 transition">En savoir plus +</a>
+            </div>
+            <div class="bg-white p-8 border border-gray-100 hover:shadow-xl transition group">
+                <h4 class="text-xl serif mb-4">Aménagement de peine</h4>
+                <p class="text-gray-500 text-sm mb-6">Bracelet électronique, libération conditionnelle : organiser votre retour à la liberté.</p>
+                <a href="amenagement-peine.html" class="text-xs uppercase font-bold tracking-wider group-hover:text-red-800 transition">En savoir plus +</a>
+            </div>
+            <div class="bg-white p-8 border border-gray-100 hover:shadow-xl transition group">
+                <h4 class="text-xl serif mb-4">Contentieux pénitentiaire</h4>
+                <p class="text-gray-500 text-sm mb-6">Défense des droits des détenus et contestation des décisions de l'administration pénitentiaire.</p>
+                <a href="contentieux-penitentiaire.html" class="text-xs uppercase font-bold tracking-wider group-hover:text-red-800 transition">En savoir plus +</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="honoraires" class="py-24 px-6 bg-white border-t border-gray-100">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl serif mb-12 text-center">Honoraires</h2>
+            
+            <div class="prose prose-lg font-light text-gray-700 space-y-8">
+                <p>L'article 11 du Règlement Intérieur National de la profession d'avocat encadre strictement la détermination des honoraires. Il prévoit que « les honoraires sont fixés selon les usages, en fonction de la situation de fortune du client, de la difficulté du dossier, des frais engagés par l'avocat, de sa notoriété et des diligences accomplies. L'avocat peut percevoir des honoraires pour le travail déjà réalisé, même si le dossier lui est retiré avant son achèvement. »</p>
+                
+                <p>Les honoraires sont toujours déterminés en concertation avec les clients, de manière transparente. Aucune facturation n'est effectuée sans accord préalable et sans que les modalités aient été clairement discutées.</p>
+
+                <div class="mt-12">
+                    <h3 class="text-2xl serif mb-6">À savoir sur les honoraires</h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="text-xl serif mb-3">Aide juridictionnelle</h4>
+                            <p>Le cabinet accepte certains dossiers au titre de l'aide juridictionnelle, après examen de la situation et des critères d'éligibilité.</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl serif mb-3">Protection juridique</h4>
+                            <p>Si le client dispose d'un contrat de protection juridique, tout ou partie des honoraires peut être pris en charge par son assurance, selon les garanties prévues.</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl serif mb-3">Indemnisation et remboursement des honoraires</h4>
+                            <p>Les articles 475-1 du Code de procédure pénale et 700 du Code de procédure civile permettent au juge de condamner la partie adverse à rembourser, en tout ou partie, les honoraires et frais engagés par le client dans le cadre de la procédure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-navy text-white py-24 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+            </div>
+        <main-footer></main-footer>
+    </section>
+
 </body>
 </html>
