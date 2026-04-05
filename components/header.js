@@ -6,11 +6,12 @@ class MainHeader extends HTMLElement {
                 <div class="text-xl font-bold tracking-widest serif uppercase text-gray-800">
                     <a href="index.html">Clothilde Legros</a>
                 </div>
-                <div class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-semibold text-gray-600">
+                <div class="hidden md:flex space-x-6 text-xs uppercase tracking-widest font-semibold text-gray-600">
                     <a href="index.html#accueil" class="hover:text-black">Accueil</a>
-                    <a href="index.html#le-cabinet" class="hover:text-black">Le Cabinet</a>
-                    <a href="index.html#domaines" class="hover:text-black">Domaines d'intervention</a>
+                    <a href="index.html#le-cabinet" class="hover:text-black">Cabinet</a>
+                    <a href="index.html#domaines" class="hover:text-black">Domaines</a>
                     <a href="index.html#honoraires" class="hover:text-black">Honoraires</a>
+                    <a href="index.html#presse" class="hover:text-black">Presse</a>
                     <a href="index.html#contact" class="hover:text-black">Contact</a>
                 </div>
                 <a href="tel:0680109505" class="bg-red-700 text-white px-5 py-2 text-xs uppercase font-bold tracking-tighter">
