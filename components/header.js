@@ -16,7 +16,6 @@ class MainHeader extends HTMLElement {
                     <a href="/#le-cabinet" class="hover:text-black">Cabinet</a>
                     <a href="/#domaines" class="hover:text-black">Domaines</a>
                     <a href="/#honoraires" class="hover:text-black">Honoraires</a>
-                    <a href="/#presse" class="hover:text-black">Presse</a>
                     <a href="/#contact" class="hover:text-black">Contact</a>
                 </div>
                 <a href="tel:0680109505" class="bg-red-700 text-white px-5 py-2 text-xs uppercase font-bold tracking-tighter">
@@ -29,7 +28,6 @@ class MainHeader extends HTMLElement {
                     <a href="/#le-cabinet" class="hover:text-black">Cabinet</a>
                     <a href="/#domaines" class="hover:text-black">Domaines</a>
                     <a href="/#honoraires" class="hover:text-black">Honoraires</a>
-                    <a href="/#presse" class="hover:text-black">Presse</a>
                     <a href="/#contact" class="hover:text-black">Contact</a>
                 </div>
             </div>
